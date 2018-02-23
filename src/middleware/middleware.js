@@ -41,7 +41,7 @@ middleware.redirectToDashboardIfLoggedIn = function(req, res, next) {
         if (req.user.hasL2Auth) {
             return middleware.ensurel2Auth(req, res, next);
         } else {
-            return res.redirect('/dashboard');
+            return res.redirect('/tickets');
         }
     } else {
         return next();
